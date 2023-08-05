@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <header id="header" class="slider-container">
+            <h1>Color Mixer RGB</h1>
+            <input type="range" min="0" max="255" id="redSlider" v-model="red" @input="updateColor">
+            <input type="range" min="0" max="255" id="greenSlider" v-model="green" @input="updateColor">
+            <input type="range" min="0" max="255" id="blueSlider" v-model="blue" @input="updateColor">
+            <p id="colorValue">{{ colorValue }}</p>
+        </header>
+
+        <main class="button-container">
+            <h1 class="text-button">Click the Button for Random Colors and HEX</h1>
+            <button id="random-color-btn" @click="randomColor">Random Color</button>
+        </main>
+
+        <script src="https://unpkg.com/vue@next"></script>
+        <script src="script.js"></script>
+</body>
+
+</html>
